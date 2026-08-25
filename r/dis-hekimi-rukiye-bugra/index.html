@@ -57,6 +57,7 @@
                      background:#171c26; }
   table.h2h td.me.warn { color:#ff8fa3; }
   table.h2h th:nth-child(2) { color:#c3cad6; }
+  table.h2h tr.sum td { border-top:2px solid #2a2f3a; font-weight:600; }
   .verdict { background:#1a1d24; border-left:3px solid #ff6b81;
               border-radius:0 8px 8px 0; padding:14px 16px; margin-top:14px; }
   @media print {
@@ -195,19 +196,15 @@
         </div></div>
 
   
-  <h2>Aynı mahalledeki bir klinikle yan yana</h2>
+  <h2>Aynı bölgedeki bir klinikle kelime kelime</h2>
+  <p class="lead">Her satır, 25 noktanın kaçında ilk 3'te
+     çıkıldığını gösterir. Toplam almak yanıltıcı olurdu — asıl mesele
+     hangi kelimede var olduğunuz.</p>
   <table class="comp h2h">
-    <tr><th></th><th>Siz</th><th>Dent Corner</th></tr>
-    <tr><td>Google puanı</td>
-        <td class="me">4.9</td><td>4.9</td></tr>
-    <tr><td>Yorum sayısı</td>
-        <td class="me">78</td><td>96</td></tr>
-    <tr><td>100 ölçümün kaçında ilk 3'te</td>
-        <td class="me warn">16</td><td>18</td></tr>
-    <tr><td>Hiç görünmediği arama kelimesi</td>
-        <td class="me warn">2 / 4</td><td>—</td></tr>
+    <tr><th>Arama kelimesi</th><th>Siz</th><th>Dent Corner</th></tr>
+    <tr><td>"diş kliniği"</td><td class="me ">2</td><td>11</td></tr><tr><td>"diş hekimi"</td><td class="me ">14</td><td>yok</td></tr><tr><td>"dişçi"</td><td class="me ">yok</td><td>yok</td></tr><tr><td>"ağız ve diş sağlığı polikliniği"</td><td class="me warn">yok</td><td>7</td></tr>
   </table>
-  <p class="lead verdict">Aradaki fark hasta memnuniyeti değil — puanlarınız neredeyse aynı (4.9 / 4.9). Fark, Google'ın sizi hangi aramalarda göstereceğine karar verme biçiminde.</p>
+  <p class="lead verdict">Dikkat edin: <b>Dent Corner sizin güçlü olduğunuz aramada hiç yok.</b> Yani sizi geçmiş değil — sadece sizin hiç bulunmadığınız kelimede tek başına duruyor: &quot;ağız ve diş sağlığı polikliniği&quot;. Puanlarınız da neredeyse aynı (4.9 / 4.9), yani mesele hekimlik değil, hangi aramada listeye girdiğiniz.</p>
 
   <h2>Sizin yerinize ilk 3'te çıkan klinikler</h2>
   <p class="lead">Toplam 25 nokta × 4 arama kelimesi =
